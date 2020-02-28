@@ -299,6 +299,7 @@
 
 @section('footscripts')
     <script>
+        let token = $("meta[name='csrf-token']").attr('content');
         let vjs = new Vue({
             el: '#contactFormWrapper',
             data: {
@@ -349,6 +350,8 @@
                         this.fireContactRequest();
                     }
                 },
+
+
                 fireContactRequest: function fireContactRequest() {
                     let _this = this;
 
@@ -359,6 +362,7 @@
                             'X-CSRF-TOKEN': $('input[name="_token"]').val()
                         },
                         data: {
+                            _token: token,
                             fname: _this.fname,
                             lname: _this.lname,
                             email: _this.email,
@@ -374,6 +378,7 @@
                                     //window.location.href = '/'
                                     //$('body').loadingModal('destroy');
                                 } else {
+                                    // console.log(data)
                                     alert(data['reason']);
                                     //$('body').loadingModal('destroy');
                                 }
@@ -400,6 +405,7 @@
                     return results;
                 },
                 validMobile: function validMobile() {
+
                     let results = false;
 
                     if (this.mobile !== '') {

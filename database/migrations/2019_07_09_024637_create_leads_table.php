@@ -23,7 +23,7 @@ class CreateLeadsTable extends Migration
             $table->string('mobile')->nullable();
             $table->text('reason')->nullable();
             $table->boolean('consent')->default(0)->nullable();
-            $table->integer('store_id')->nullable();
+            $table->string('store_id')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

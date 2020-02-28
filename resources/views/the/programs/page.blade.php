@@ -204,11 +204,11 @@
         <div id="segmentWrapper">
             @foreach($programs as $program)
             <div class="segment-row row-{{ $program['img_orientation'] }}">
-                <div class="media-wrapper">
+                <div class="media-wrapper col">
                     <img src="{{ $program['img'] }}" class="img-img row-img-{{ $program['img_orientation'] }}" />
                 </div>
 
-                <div class="verbiage-wrapper">
+                <div class="verbiage-wrapper col">
                     <h2>{!! $program['title'] !!}</h2>
                     {!! $program['desc'] !!}
                 </div>

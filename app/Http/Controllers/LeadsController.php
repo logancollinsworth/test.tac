@@ -43,9 +43,10 @@ class LeadsController extends Controller
 
     public function process_free_pass()
     {
+
         $results = ['success' => false, 'reason' => 'Bad Data'];
 
-        $data = $this->request->all();
+        $data = $this->request->except('_token');
 
         $validated = Validator::make($data, [
             'fname' => 'bail|required',
@@ -66,6 +67,7 @@ class LeadsController extends Controller
         }
         else
         {
+
             $data['reason'] = 'Free Pass';
             $data['club_id'] = $data['foundOut'];
             $data['consent'] = $data['consent'] == 'true';
@@ -81,8 +83,8 @@ class LeadsController extends Controller
                 $results['lead'] = $lead;
                 unset($results['reason']);
             }
-        }
 
+        }
         return $results;
     }
 

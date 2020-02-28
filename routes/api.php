@@ -20,6 +20,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('/email/fire', 'CMS\EmailAdminController@fire')->name('fire');
 Route::post('/email/contact', 'CMS\EmailAdminController@contact')->name('contact');
 
+//@todo - may need to move '/leads/{type}' to api routes.
+//Route::post('/leads/{type}', 'LeadsController@process_lead');
+
 Route::post('/leads/enroll', 'LeadsController@process_initial_enroll_lead');
 Route::post('/leads/{type}', 'LeadsController@process_lead');
 Route::post('/lead/combo6', 'LeadsController@process_combo6_lead');

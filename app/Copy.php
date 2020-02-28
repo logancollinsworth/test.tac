@@ -12,7 +12,22 @@ class Copy extends Model
 
     protected $table = 'copy';
 
-    protected $fillable = ['page', 'name', 'title', 'desc', 'style', 'cascade_position'];
+    protected $fillable = [
+        'page',
+        'name',
+        'title',
+        'desc',
+        'style',
+        'cascade_position',
+        'headline',
+        'headline-m',
+        'subheading',
+        'paragraph',
+        'button-text',
+        'learn-text',
+        'misc-text',
+
+    ];
 
     public function getVerbiageforAPage($page)
     {

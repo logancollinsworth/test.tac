@@ -86745,8 +86745,8 @@ if (!this.JSON) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/cnbangelgonzalez/Development/Projects/Work/CapeAndBay/TruFit/THE/the_assessment/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/cnbangelgonzalez/Development/Projects/Work/CapeAndBay/TruFit/THE/the_assessment/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/vagrant/code/eval/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/vagrant/code/eval/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

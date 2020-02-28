@@ -52,4 +52,13 @@ class Images extends Model
 
         return $results;
     }
+
+    public function reverseImageOrientation($orientation)
+    {
+        if($orientation = 'left'){
+
+        }else{
+
+        }
+    }
 }

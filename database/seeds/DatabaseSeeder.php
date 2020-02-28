@@ -13,5 +13,6 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(ImageTableSeeder::class);
         $this->call(StoresTableSeeder::class);
+        $this->call(HeroTableSeeder::class);
     }
 }

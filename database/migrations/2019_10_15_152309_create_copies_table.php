@@ -20,6 +20,13 @@ class CreateCopiesTable extends Migration
             $table->string('name')->nullable();
             $table->string('title')->nullable();
             $table->string('desc')->nullable();
+            $table->string('headline')->nullable();
+            $table->string('headline-m')->nullable();
+            $table->string('subheading')->nullable();
+            $table->string('paragraph')->nullable();
+            $table->string('button-text')->nullable();
+            $table->string('learn-text')->nullable();
+            $table->string('misc-text')->nullable();
 
             $table->string('style')->default('normal');
             $table->string('cascade_position')->nullable();
